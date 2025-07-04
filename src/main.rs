@@ -17,7 +17,7 @@ fn load_config() -> Config {
 
 fn main() -> std::io::Result<()> {
     let config = load_config();
-    let address = format!("0.0.0.0:{}", config.port);
+    let address = format!("127.0.0.1    :{}", config.port);
     let listener = TcpListener::bind(&address)?;
     println!("Server listening on http://{}", address);
 
